@@ -1,0 +1,52 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.form {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.field {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+    position: relative;
+    align-items: stretch; 
+
+    label {
+        display: flex;
+        flex: 0 0 10rem;
+        font-weight: bold;
+        font-size:13px;
+        background: linear-gradient( #142a2b, #5a3062); /* Gradiente de izquierda a derecha */
+        color: white; /* Color del texto */
+        align-items: center;
+        padding-left: 5px;
+        margin-right: 2px;
+        border-style: solid;
+        border-color: #422d46; 
+        //border-image: linear-gradient(to right, rgb(181, 63, 104), rgb(107, 168, 15)) 1; 
+        
+    }
+
+    input {
+        flex: 1;
+        position: relative; /* Para el posicionamiento del pseudo-elemento */
+        z-index: 1; /* Para que el input esté encima del borde */ 
+        border-width: 3px; 
+        border-style: solid; 
+        border-image: linear-gradient(to right, rgb(82, 123, 21), rgb(152, 49, 85)) 1; 
+        padding: 10px; 
+        background: rgb(39, 73, 86); 
+        color: white;
+
+    }
+
+    input::placeholder {
+        color: beige;
+        opacity: 0.6;
+    }
+
+}
+
+

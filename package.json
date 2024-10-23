@@ -1,0 +1,23 @@
+{
+  "name": "takecareapp",
+  "version": "1.0.0",
+  "description": "Curso PHP,MVC",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^10.3.12",
+    "gulp": "^5.0.0",
+    "gulp-dart-sass": "^1.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.79.3",
+    "sharp": "^0.33.3"
+  },
+  "dependencies": {
+    "gulp-cli": "^3.0.0"
+  }
+}

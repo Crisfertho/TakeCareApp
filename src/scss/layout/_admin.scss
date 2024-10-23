@@ -1,0 +1,48 @@
+@use 'base/variables' as v;
+
+.citas {
+    list-style: none;
+    padding: 0;
+    li {
+        padding: 0.8rem;
+        border-top: 1px solid rgb(179, 217, 109);
+        p {
+            font-weight: bold;
+            color: rgb(149, 182, 73);
+            margin-top: 0;
+        }
+
+        span {
+            font-weight: normal;
+            color: rgb(252, 247, 240);
+        }
+    }
+}
+
+.service {
+    margin-top: 0;
+}
+
+.total {
+    font-weight: bold;
+    color: rgb(149, 182, 73);
+
+    span {
+        font-weight: normal;
+        color: rgb(252, 247, 240);
+    }
+}
+
+.services {
+    @extend .citas;
+
+    .actions { 
+        margin: 0;
+    }
+
+    .button,
+    .deleteButton {
+        margin: 3px;
+    }
+}
+

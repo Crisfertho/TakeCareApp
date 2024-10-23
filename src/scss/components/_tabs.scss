@@ -1,0 +1,35 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+@use 'sass:color';
+
+.tabs {
+
+    @include m.tablet {
+        display: flex;
+        gap: 1rem;
+    }
+
+    button {
+        background-color: rgb(35, 47, 117);
+        border: none;
+        border-radius: 10px;
+        color: v.$blanco;
+        font-size: small;
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background-color 300ms ease;
+
+        &:hover {
+            cursor: pointer;
+            background-color: color.scale(rgb(35, 47, 117), $lightness: -10%);
+        }
+        &.actual {
+            background-color: rgb(157, 192, 193);
+            color: rgb(35, 47, 117);
+        }
+    }
+}

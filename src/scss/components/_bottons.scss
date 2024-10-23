@@ -1,0 +1,10 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.button {
+    @include m.button(#346197, v.$blanco )
+}
+
+.deleteButton {
+    @include m.button(#b23131, v.$blanco )
+}

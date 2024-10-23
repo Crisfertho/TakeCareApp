@@ -1,0 +1,105 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.container-app {
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        min-height: 100vh;
+    }
+
+    .image {
+        background-image: url(../img/2.webp);
+        //margin-bottom: 8px; /* Espacio debajo de la imagen */
+        height: 16rem;
+        width: 16rem; /* Ancho igual a la altura para hacerlo circular */
+        background-size: cover; border-radius: 50%; /* Hace que el contenedor sea redondo */
+        margin: 0 auto; // Para centrar horizontalmente
+    }
+
+
+    .app {
+        width: 96%;
+        margin: 0 auto;
+        padding: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        //align-items: center;
+        @include m.tablet {
+            overflow: scroll;
+            overflow-x: hidden;
+            padding: 1rem;
+        }
+
+        // Personalizar el scroll para navegadores basados en WebKit
+        &::-webkit-scrollbar {
+            width: 8px; /* Hacer más delgado */
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgb(29, 28, 37);; /* Fondo del scroll con opacidad */
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba(140, 126, 126, 0.623); /* Color del scroll con opacidad */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(96, 92, 92, 0.7); /* Cambio de opacidad al pasar el mouse */
+        }
+       
+    }
+
+    .barr {
+        margin: 3rem 0;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .button {
+            background-color: rgb(181, 111, 105);
+            font-size: smaller;
+            border-radius: 5px;
+        }
+    
+        .hello {
+            font-weight: bolder;
+            color: rgb(171, 210, 210);
+    
+            span {
+                color: rgb(196, 171, 45);
+                font-weight: lighter;
+            }
+        }
+    }
+
+    
+    .imagen {
+        height: 20rem;
+        background-image: url(../img/takecare.webp);
+        background-size: cover;
+        background-position: center center;
+        @include m.tablet {
+            height: auto;
+        }
+    }
+
+}
+
+.servicesBar {
+    margin-bottom: 2rem;
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .button {
+        margin:  0 0 1rem 0;
+    }
+}
+
+

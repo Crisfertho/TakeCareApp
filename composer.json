@@ -1,0 +1,25 @@
+{
+    "name": "crist/take-care-app",
+    "description": "Una aplicación para gestionar cuidados.",
+    "type": "project",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Crisfertho",
+            "email": "cristhofer.rg06@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Models\\" : "./models",
+            "Classes\\" : "./classes"
+        }
+    },
+    "require": {
+        "phpmailer/phpmailer": "^6.9",
+        "vlucas/phpdotenv": "^5.6"
+    }
+    
+}

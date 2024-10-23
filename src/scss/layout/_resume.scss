@@ -1,0 +1,38 @@
+@use 'base/variables' as v;
+
+.resume-content {
+    p {
+        margin-bottom: 1rem;
+    }
+
+    span {
+        color: rgb(65, 48, 75);
+        font-weight: bold;
+        font-size: 2.3rem;
+        text-shadow: 
+        -0.5px -0.5px 0 rgb(213, 200, 101), /* Sombra superior izquierda */
+        0.5px -0.5px 0 rgb(177, 135, 174), /* Sombra superior derecha */
+       -0.5px  0.5px 0 rgb(71, 195, 164), /* Sombra inferior izquierda */
+        0.5px  0.5px 0 rgb(68, 145, 92); /* Sombra inferior derecha */
+    }
+
+    h2 {
+        color: rgb(114, 61, 84);
+        text-shadow: 
+        1px  1px 0 rgb(68, 145, 92), /* Sombra inferior derecha */
+        -1px  1px 0 rgb(71, 195, 164), /* Sombra inferior izquierda */
+        1px -1px 0 rgb(177, 135, 174), /* Sombra superior derecha */
+        -1px -1px 0 rgb(213, 200, 101); /* Sombra superior izquierda */
+    }
+
+}
+
+.service-content {  
+    padding: 1rem 0;
+    border-bottom: 1px solid v.$gris;
+
+    &:last-of-type {
+        margin-bottom: 2rem;
+    }
+
+}
