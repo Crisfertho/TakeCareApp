@@ -111,7 +111,7 @@ function nextpage(){
 
 async function APIconsult() {
     try {
-        const url = 'http://localhost:3000/api/services';
+        const url = '/api/services';
         const result = await fetch(url);
         const services = await result.json();
         showServices(services);
@@ -329,7 +329,7 @@ async function reserveCita() {
 
     try {
         //Peticion API
-        const url = 'http://localhost:3000/api/citas'
+        const url = '/api/citas'
         const respt = await fetch(url, {
         method: 'POST',
         body: data
